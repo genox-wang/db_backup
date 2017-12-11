@@ -1,0 +1,5 @@
+sobering_subscription
+  ss_alarm
+  ss_ad_source_offer
+  ss_request_log_%y%m%d
+  ss_postback_log_%y%m%d
