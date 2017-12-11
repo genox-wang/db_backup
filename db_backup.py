@@ -142,7 +142,7 @@ def main(argv):
     sys.exit(2)
   for opt, arg in opts:
     if opt == '-h':
-      print ('mysql_backup.py -f <db tables txt> -s <mysql host> -u <mysql user> -p <mysql password> -a <tmp dir> -b <backup server> -d <backup path> -t <target date es. 171201> -c')
+      print ('db_backup.py -f <db tables txt> -s <mysql host> -u <mysql user> -p <mysql password> -a <tmp dir> -b <backup server> -d <backup path> -t <target date es. 171201> -c')
       sys.exit()
     elif opt == "-s":
       DB_HOST = arg

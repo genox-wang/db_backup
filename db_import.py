@@ -78,7 +78,7 @@ def main(argv):
     sys.exit(2)
   for opt, arg in opts:
     if opt == '-h':
-      print ('mysql_import.py -s <mysql host> -u <mysql user> -p <mysql password> -d <backup path -t <target date es. 171201>')
+      print ('db_import.py -s <mysql host> -u <mysql user> -p <mysql password> -d <backup path -t <target date es. 171201>')
       sys.exit()
     elif opt == "-s":
       DB_HOST = arg
