@@ -2,6 +2,8 @@
 
 ## Back up
 
+根据配置文件备份数据库表，压缩发送到备份服务器
+
 - db table file 备份库表配置文件 默认 'db_tables.txt'
 - db host 默认 'localhost'
 - db user 默认 'root'
@@ -18,9 +20,7 @@ $ python3 db_backup.py [-f <db tables file> -s <db host> -u <db user> -p <db pas
 
 ## Import
 
-
-BACKUP_PATH = '/Users/bill/backup/dbbackup/'  # 本地备份临时文件夹
-
+指定日期的备份数据入库
 
 - db host 默认 'localhost'
 - db user 默认 'root'
@@ -33,6 +33,8 @@ $ python3 db_import.py [ -s <db host> -u <db user> -p <db password> -d <backup p
 ```
 
 ## Db table config
+
+配置文件格式
 
 ```
 <db name>
