@@ -2,14 +2,34 @@
 
 ## Back up
 
+- db table file 备份库表配置文件 默认 'db_tables.txt'
+- db host 默认 'localhost'
+- db user 默认 'root'
+- db password 默认 'root'
+- tmp path 本地备份临时文件夹 默认 '/Users/bill/backup/dbbackup/'  
+- c  备份完成删除临时文件 默认 false 
+- backup server 备份服务器 默认 'root@106.14.148.86'  
+- backup path 备份服务器备份目录 默认 '/root/backup/'
+- target date 备份目标日期  默认 UTC时间昨天 格式 y%m%d
+
 ```python
-$ db_backup.py [-f <db tables txt> -s <mysql host> -u <mysql user> -p <mysql password> -a <tmp dir> -b <backup server> -d <backup path> -t <target date es. 171201> -c]
+$ python3 db_backup.py [-f <db tables file> -s <db host> -u <db user> -p <db password> -a <tmp path> -b <backup server> -d <backup path> -t <target date es. 171201> -c]
 ```
 
 ## Import
 
+
+BACKUP_PATH = '/Users/bill/backup/dbbackup/'  # 本地备份临时文件夹
+
+
+- db host 默认 'localhost'
+- db user 默认 'root'
+- db password 默认 'root'
+- backup path 备份服务器备份目录 默认 '/root/backup/'
+- target date 备份目标日期  默认 UTC时间昨天 格式 y%m%d
+
 ```python
-$ db_import.py [ -s <mysql host> -u <mysql user> -p <mysql password> -d <backup path> -t <target date es. 171201> ]
+$ python3 db_import.py [ -s <db host> -u <db user> -p <db password> -d <backup path> -t <target date es. 171201> ]
 ```
 
 ## Db table config
