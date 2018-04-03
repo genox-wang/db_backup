@@ -12,12 +12,12 @@ DB_TABLES_FILE = 'db_tables.txt'
 DB_HOST = 'ss_mysql'
 DB_USER = 'root'
 DB_USER_PASSWORD = 'root'
-TMP_PATH = '/'  # 本地备份临时文件夹
+TMP_PATH = './backup_'  # 本地备份临时文件夹
 CLEAN_TMP_COPLETED = False  # 备份完成删除临时文件
 
 BACKUP_SERVER = 'wangji@121.40.124.234'  # 备份服务器用户id
 BACKUP_SERVER_PORT = 6001
-BACKUP_PATH = '/backup/sobering_subscription'  # 备份服务器备份目录
+BACKUP_PATH = '/backup/sobering_subscription/'  # 备份服务器备份目录
 
 def mysql_backup(date_format):
   DATETIME = date_format
@@ -99,6 +99,7 @@ def mysql_backup(date_format):
 
     print_warn("[MYSQL BACKUP] start rsyn copy to backup server")
     rsynccmd = 'rsync -avzP -e \'ssh -p {0}\' {1} {2}:{3}'.format(BACKUP_SERVER_PORT, zippath, BACKUP_SERVER, BACKUP_PATH)
+    print_success("[MYSQL BACKUP] exec cmd: {0}".format(rsynccmd))
     os.system(rsynccmd)
     print_success("[MYSQL BACKUP] complete rsyn copy to backup server")
     if CLEAN_TMP_COPLETED:
