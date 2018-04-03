@@ -70,7 +70,8 @@ def mysql_backup(date_format):
       if db in dumptables:
         for table in dumptables[db]:
           print_warn("[MYSQL BACKUP] start backup : {0}.{1} ".format(db,table))
-          dumpcmd = "mysqldump -h {0} -u {1} -p{2} {3} {4} > {5}/{6}.{7}.sql".format(DB_HOST, DB_USER, DB_USER_PASSWORD, db, table, TODAYTMPPATH, db, table)
+          # dumpcmd = "mysqldump -h {0} -u {1} -p{2} {3} {4} > {5}/{6}.{7}.sql".format(DB_HOST, DB_USER, DB_USER_PASSWORD, db, table, TODAYTMPPATH, db, table)
+          dumpcmd = "sudo docker exec {0} /usr/bin/mysqldump -u {1} -p{2} {3} {4} > {5}/{6}.{7}.sql".format(DB_HOST, DB_USER, DB_USER_PASSWORD, db, table, TODAYTMPPATH, db, table)
           status = os.system(dumpcmd)
           if status != 0:
             print_error("[MYSQL BACKUP] os.system status : {0}".format(status))
