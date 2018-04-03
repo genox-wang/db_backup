@@ -1,5 +1,4 @@
 sobering_subscription
-  ss_alarm
-  ss_ad_source_offer
-  ss_request_log_%y%m%d
+  ss_post_back_log_h_hour
+  ss_request_log_h_hour
   ss_postback_log_%y%m%d
