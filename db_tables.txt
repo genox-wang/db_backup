@@ -2,3 +2,6 @@ sobering_subscription
   ss_post_back_log_h_hour
   ss_request_log_h_hour
   ss_postback_log_%y%m%d
+  ss_channel
+  ss_ad_source
+  ss_ad_source_license
