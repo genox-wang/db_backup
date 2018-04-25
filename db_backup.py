@@ -88,7 +88,7 @@ def mysql_backup(date_format):
 
     print_warn("[MYSQL BACKUP] Zip directory {0} to {1}".format(TODAYTMPPATH, zippath))
 
-    globpath = '{0}/*'.format(TODAYTMPPATH, DATETIME)
+    globpath = '{0}/*'.format(TODAYTMPPATH)
     files = glob.glob(globpath)
     f = zipfile.ZipFile(zippath, 'w', zipfile.ZIP_DEFLATED)
     for file in files:
@@ -126,6 +126,7 @@ SHELL_WHITE="\033[0;37m"        # White
 
 def print_info(str):
   print('{0}{1}{2}'.format(SHELL_BLUE, str, SHELL_COLOR_OFF))
+
 
 
 def print_warn(str):

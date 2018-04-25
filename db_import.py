@@ -37,6 +37,7 @@ def import_sql(date_format):
       print_error("[MYSQL IMPORT] remove file: {0}".format(sql_path))
       os.remove(sql_path)
     z.close()
+    
   except IOError:
     print_error("{0} not found".format(zippath))
   pass
