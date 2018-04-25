@@ -1,5 +1,11 @@
 language: python
-script: true
+
+python:
+  - "3.6"
+
+# command to run tests
+script: pytest
+
 
 notifications:
   email:
